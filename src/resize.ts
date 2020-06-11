@@ -7,5 +7,5 @@ const IMAGE = join(__dirname, '..', 'image.png')
 ;(async () => {
   const baseImage = await Jimp.read(IMAGE)
   baseImage.resize(100, 100)
-  baseImage.write(OUTPUT_PATH)
+  await baseImage.writeAsync(OUTPUT_PATH)
 })()
